@@ -23,8 +23,7 @@ $(call inherit-product-if-exists, vendor/samsung/kltedcmactive/kltedcmactive-ven
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # NFC
-PRODUCT_PACKAGES += \
-    nfc_nci.pn54x.default
+DEVICE_NFC_SONY=yes
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \

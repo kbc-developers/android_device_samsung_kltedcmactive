@@ -26,7 +26,7 @@ TARGET_LIBINIT_DEFINES_FILE := device/samsung/kltedcmactive/init/init_klte.cpp
 TARGET_UNIFIED_DEVICE := true
 
 # NFC
-BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_CHIPSET := sony
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
