@@ -20,15 +20,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/samsung/kltedcmactive/kltedcmactive-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/kltedcmactive/overlay
 
 # NFC
 DEVICE_NFC_SONY=yes
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+    device/samsung/kltedcmactive/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/samsung/kltedcmactive/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    device/samsung/kltedcmactive/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
