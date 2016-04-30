@@ -17,6 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/samsung/kltedcm/kltedcm-vendor.mk)
 $(call inherit-product-if-exists, vendor/samsung/kltedcmactive/kltedcmactive-vendor.mk)
 
 # Overlays
@@ -24,6 +25,11 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/kltedcmactive/overlay
 
 # NFC
 DEVICE_NFC_SONY=yes
+
+# Ramdisk for FeliCa
+PRODUCT_PACKAGES += \
+    init.carrier.rc \
+    init.felica.sh
 
 PRODUCT_COPY_FILES += \
     device/samsung/kltedcmactive/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \

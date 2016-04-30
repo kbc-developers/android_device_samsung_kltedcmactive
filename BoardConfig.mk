@@ -36,4 +36,5 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2548039680
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12442369024 # 12442385408 - 16384
 
 # inherit from the proprietary version
+-include vendor/samsung/kltedcm/BoardConfigVendor.mk
 -include vendor/samsung/kltedcmactive/BoardConfigVendor.mk
