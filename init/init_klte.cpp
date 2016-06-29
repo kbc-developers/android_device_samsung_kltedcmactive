@@ -36,13 +36,6 @@
 
 #include "init_msm.h"
 
-void gsm_properties()
-{
-    property_set("telephony.lteOnGsmDevice", "1");
-    property_set("ro.telephony.default_network", "9");
-    property_set("ro.telephony.ril.config", "newDialCode");
-}
-
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
     char platform[PROP_VALUE_MAX];
@@ -61,5 +54,5 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     property_set("ro.product.model", "SC-02G");
     property_set("ro.product.device", "SC-02G");
     property_set("ro.product.name", "SC-02G");
-    gsm_properties();
+    
 }
