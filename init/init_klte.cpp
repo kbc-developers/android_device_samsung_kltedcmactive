@@ -48,8 +48,8 @@ void init_target_properties()
     if (!rc || !ISMATCH(platform, ANDROID_TARGET))
         return;
 
-    property_set("ro.build.fingerprint", "samsung/SC-02G/SC-02G:5.0/LRX21T/SC02GOMU2BOK2:user/release-keys");
-    property_set("ro.build.description", "kltedcmactive-user 5.0 LRX21T SC02GOMU2BOK2 release-keys");
+    property_set("ro.build.fingerprint", "samsung/SC-02G/SC-02G:6.0.1/MMB29M/SC02GOMU2CPH3:user/release-keys");
+    property_set("ro.build.description", "kltedcmactive-user 6.0.1 MMB29M SC02GOMU2CPH3 release-keys");
     property_set("ro.product.model", "SC-02G");
     property_set("ro.product.device", "SC-02G");
     property_set("ro.product.name", "SC-02G");
