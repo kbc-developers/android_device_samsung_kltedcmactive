@@ -37,16 +37,14 @@
 
 #include "init_msm8974.h"
 
-#define ISMATCH(a, b) (!strncmp((a), (b), PROP_VALUE_MAX))
 
 void init_target_properties()
 {
-    char platform[PROP_VALUE_MAX];
-    int rc;
-
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
+    std::string platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
         return;
+
+    std::string bootloader = property_get("ro.bootloader");
 
     property_set("ro.build.fingerprint", "samsung/SC-02G/SC-02G:6.0.1/MMB29M/SC02GOMU2CPH3:user/release-keys");
     property_set("ro.build.description", "kltedcmactive-user 6.0.1 MMB29M SC02GOMU2CPH3 release-keys");
@@ -54,4 +52,6 @@ void init_target_properties()
     property_set("ro.product.device", "SC-02G");
     property_set("ro.product.name", "SC-02G");
     
+    std::string device = property_get("ro.product.device");
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
 }
