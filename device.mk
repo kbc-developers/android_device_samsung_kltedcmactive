@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,6 +23,10 @@ $(call inherit-product-if-exists, vendor/samsung/kltedcmactive/kltedcmactive-ven
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/kltedcmactive/overlay
+
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
 
 # NFC
 DEVICE_NFC_SONY=yes
