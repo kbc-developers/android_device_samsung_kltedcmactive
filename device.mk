@@ -24,10 +24,6 @@ $(call inherit-product-if-exists, vendor/samsung/kltedcmactive/kltedcmactive-ven
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/kltedcmactive/overlay
 
-# GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
-
 # NFC
 DEVICE_NFC_SONY=yes
 
