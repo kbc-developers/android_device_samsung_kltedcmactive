@@ -40,7 +40,6 @@
 void gsm_properties()
 {
     property_set("ro.telephony.default_network", "9");
-    property_set("ro.telephony.ril.config", "newDialCode");
     property_set("telephony.lteOnGsmDevice", "1");
 }
 
