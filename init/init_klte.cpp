@@ -37,6 +37,12 @@
 
 #include "init_msm8974.h"
 
+void gsm_properties()
+{
+    property_set("ro.telephony.default_network", "9");
+    property_set("ro.telephony.ril.config", "newDialCode");
+    property_set("telephony.lteOnGsmDevice", "1");
+}
 
 void init_target_properties()
 {
@@ -51,6 +57,7 @@ void init_target_properties()
     property_set("ro.product.model", "SC-02G");
     property_set("ro.product.device", "SC-02G");
     property_set("ro.product.name", "SC-02G");
+    gsm_properties();
     
     std::string device = property_get("ro.product.device");
     INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
