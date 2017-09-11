@@ -51,11 +51,11 @@ void init_target_properties()
 
     std::string bootloader = property_get("ro.bootloader");
 
-    property_set("ro.build.fingerprint", "samsung/SC-02G/SC-02G:6.0.1/MMB29M/SC02GOMU2CPH3:user/release-keys");
-    property_set("ro.build.description", "kltedcmactive-user 6.0.1 MMB29M SC02GOMU2CPH3 release-keys");
-    property_set("ro.product.model", "SC-02G");
-    property_set("ro.product.device", "SC-02G");
-    property_set("ro.product.name", "SC-02G");
+    property_override("ro.build.fingerprint", "samsung/SC-02G/SC-02G:6.0.1/MMB29M/SC02GOMU2CPH3:user/release-keys");
+    property_override("ro.build.description", "kltedcmactive-user 6.0.1 MMB29M SC02GOMU2CPH3 release-keys");
+    property_override("ro.product.model", "SC-02G");
+    property_override("ro.product.device", "SC-02G");
+    property_override("ro.product.name", "SC-02G");
     gsm_properties();
     
     std::string device = property_get("ro.product.device");
