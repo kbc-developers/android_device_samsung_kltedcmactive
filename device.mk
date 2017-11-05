@@ -40,9 +40,9 @@ PRODUCT_PACKAGES += \
 #    nfc_nci.msm8974
 
 PRODUCT_COPY_FILES += \
-    device/samsung/kltedcmactive/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/samsung/kltedcmactive/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    device/samsung/kltedcmactive/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+    device/samsung/kltedcmactive/configs/libnfc-brcm.conf:system/vendor/etc/libnfc-brcm.conf \
+    device/samsung/kltedcmactive/configs/libnfc-nxp.conf:system/vendor/etc/libnfc-nxp.conf \
+    device/samsung/kltedcmactive/configs/nfcee_access.xml:system/vendor/etc/nfcee_access.xml
 
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
