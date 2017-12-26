@@ -34,14 +34,6 @@ include $(COMMON_PATH)/nfc/sony/board.mk
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
 
-# Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
-BOARD_CACHEIMAGE_PARTITION_SIZE := 524288000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2548039680
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 12442369024 # 12442385408 - 16384
-
-
 # inherit from the proprietary version
 -include vendor/samsung/kltedcm/BoardConfigVendor.mk
 -include vendor/samsung/kltedcmactive/BoardConfigVendor.mk
