@@ -1,4 +1,5 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2014-2016 The CyanogenMod Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,6 +32,7 @@ TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/kltedcmactive/init/init_kl
 BOARD_NFC_CHIPSET := sony
 #BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_HAL_SUFFIX := msm8974
+
 
 # inherit from the proprietary version
 -include vendor/samsung/kltedcm/BoardConfigVendor.mk
