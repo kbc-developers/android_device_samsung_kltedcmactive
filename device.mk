@@ -37,9 +37,5 @@ PRODUCT_COPY_FILES += \
     device/samsung/kltedcmactive/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     device/samsung/kltedcmactive/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
-# Variant blobs script
-PRODUCT_COPY_FILES += \
-    device/samsung/klte-common/releasetools/variant_blobs.sh:install/bin/variant_blobs.sh
-
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
