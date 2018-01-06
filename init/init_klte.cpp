@@ -37,27 +37,31 @@
 
 #include "init_msm8974.h"
 
-void gsm_properties()
+void set_rild_libpath(char const *variant)
 {
+    std::string libpath("/system/vendor/lib/libsec-ril.");
+    libpath += variant;
+    libpath += ".so";
+
+    property_override("rild.libpath", libpath.c_str());
+}
+
+void gsm_properties(char const *rild_lib_variant)
+{
+    set_rild_libpath(rild_lib_variant);
+
     property_set("ro.telephony.default_network", "9");
     property_set("telephony.lteOnGsmDevice", "1");
 }
 
 void init_target_properties()
 {
-    std::string platform = property_get("ro.board.platform");
-    if (platform != ANDROID_TARGET)
-        return;
-
-    std::string bootloader = property_get("ro.bootloader");
 
     property_override("ro.build.fingerprint", "samsung/SC-02G/SC-02G:6.0.1/MMB29M/SC02GOMU2CPH3:user/release-keys");
     property_override("ro.build.description", "kltedcmactive-user 6.0.1 MMB29M SC02GOMU2CPH3 release-keys");
     property_override("ro.product.model", "SC-02G");
     property_override("ro.product.device", "SC-02G");
     property_override("ro.product.name", "SC-02G");
-    gsm_properties();
+    gsm_properties("gsm");
     
-    std::string device = property_get("ro.product.device");
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
 }
