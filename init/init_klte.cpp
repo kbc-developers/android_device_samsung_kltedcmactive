@@ -30,10 +30,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "vendor_init.h"
+#include <android-base/properties.h>
 #include "property_service.h"
+#include "vendor_init.h"
 #include "log.h"
-#include "util.h"
 
 #include "init_msm8974.h"
 
