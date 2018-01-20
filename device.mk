@@ -32,23 +32,17 @@ $(call inherit-product, device/samsung/klte-common/fingerprint/product.mk)
 
 # NFC
 DEVICE_NFC_SONY=yes
+$(call inherit-product, device/samsung/klte-common/nfc/sony/product.mk)
 
 # Ramdisk for FeliCa
 PRODUCT_PACKAGES += \
     init.carrier.rc \
     init.felica.sh
 
-# See https://github.com/LineageOS/android_system_nfc/blob/lineage-15.0/halimpl/pn54x/Android.mk#L15
-# for magic values of NXP_CHIP_TYPE.
-#NXP_CHIP_TYPE := 1
+#Smart card service for felica
+#TARGET_ENABLE_SMARTCARD_SERVICE := true
 #PRODUCT_PACKAGES += \
-#    libpn547_fw \
-#    nfc_nci.msm8974
-
-PRODUCT_COPY_FILES += \
-    device/samsung/kltedcmactive/configs/libnfc-brcm.conf:system/vendor/etc/libnfc-brcm.conf \
-    device/samsung/kltedcmactive/configs/libnfc-nxp.conf:system/vendor/etc/libnfc-nxp.conf \
-    device/samsung/kltedcmactive/configs/nfcee_access.xml:system/vendor/etc/nfcee_access.xml
+#    org.simalliance.openmobileapi.xml org.simalliance.openmobileapi
 
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
