@@ -28,7 +28,7 @@ $(call inherit-product-if-exists, vendor/samsung/kltedcmactive/kltedcmactive-ven
 DEVICE_PACKAGE_OVERLAYS += device/samsung/kltedcmactive/overlay
 
 # Fingerprint
-$(call inherit-product, device/samsung/klte-common/fingerprint/product.mk)
+#$(call inherit-product, device/samsung/klte-common/fingerprint/product.mk)
 
 # NFC
 DEVICE_NFC_SONY=yes
