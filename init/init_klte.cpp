@@ -30,12 +30,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include <android-base/logging.h>
 #include <android-base/properties.h>
+
 #include "property_service.h"
 #include "vendor_init.h"
-#include "log.h"
 
 #include "init_msm8974.h"
+
+using android::base::GetProperty;
+using android::init::property_set;
 
 void set_rild_libpath(char const *variant)
 {
