@@ -19,7 +19,7 @@ include device/samsung/klte-common/BoardConfigCommon.mk
 TARGET_OTA_ASSERT_DEVICE := kltedcmactive,SC-02G
 
 # Kernel
-TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_kactivelte_dcm_defconfig
+TARGET_KERNEL_CONFIG := lineage_kltedcmactive_defconfig
 
 # Fingerprint
 include $(COMMON_PATH)/fingerprint/board.mk
