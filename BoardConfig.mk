@@ -22,7 +22,7 @@ TARGET_OTA_ASSERT_DEVICE := kltedcmactive,SC-02G
 TARGET_KERNEL_CONFIG := lineage_kltedcmactive_defconfig
 
 # Fingerprint
-include $(COMMON_PATH)/fingerprint/board.mk
+#include $(COMMON_PATH)/fingerprint/board.mk
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8974
